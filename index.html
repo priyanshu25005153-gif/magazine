@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pulse Magazine – Your Daily News Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: #f5f6fa; color: #222226; }
+    header { background: #f44336; color: #fff; padding: 2em 0; text-align: center;}
+    nav { background: #b71c1c; text-align: center;}
+    nav a {
+      color: #fff; display: inline-block; padding: 1em 2em; text-decoration: none; font-weight: bold;
+    }
+    nav a:hover { background: #ff7961; }
+    .container { max-width: 1100px; margin: 2em auto; background: #fff; padding: 2em; border-radius: 9px; box-shadow: 0 0 20px #cfd8dc;}
+    .row { display: flex; gap: 2em; flex-wrap: wrap;}
+    .section-title { font-size: 1.35em; color: #f44336; border-bottom: 2px solid #ffcdd2; margin-bottom: 0.8em; }
+    .topic-section { flex: 1; min-width: 260px; margin-bottom: 2.1em;}
+    .article {
+      background: #ffe0e0; margin-bottom: 1em; padding: 1em 1.3em; border-radius: 9px; box-shadow: 0 1px 5px #ffe7e7;
+    }
+    .article-title { font-size: 1.07em; color: #b71c1c; margin-bottom: 0.2em;}
+    .article-author { color: #424242; font-size: 0.95em;}
+    .subscribe-section {
+      background: #e3f2fd; border-radius: 8px; padding: 1.3em 1em; margin: 2.5em 0 0 0; box-shadow: 0 1px 8px #b2bec3;
+    }
+    .subscribe-section label { font-weight: bold; }
+    .subscribe-section input {
+      padding: 0.7em 1.1em; border-radius: 6px; border: 1px solid #bdbdbd; margin: .5em 0 .7em 0; width: 98%;
+    }
+    .subscribe-section button {
+      background: #f44336; color: #fff; border: none; padding: 0.7em 2em; font-size: 1em;
+      border-radius: 6px; cursor: pointer; font-weight: bold;
+    }
+    .subscribe-section button:hover { background: #b71c1c;}
+    footer { background: #f44336; color: #fff; text-align: center; padding: 1.4em 0; margin-top: 2.5em;}
+    @media (max-width: 900px) {
+      .container { padding: 1em; }
+      .row { flex-direction: column; gap: 1em;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pulse Magazine</h1>
+    <p>Your Daily News Portal</p>
+  </header>
+  <nav>
+    <a href="#news">News</a>
+    <a href="#tech">Technology</a>
+    <a href="#health">Health</a>
+    <a href="#entertainment">Entertainment</a>
+    <a href="#subscribe">Subscribe</a>
+  </nav>
+  
+  <div class="container">
+    <div class="row">
+      <!-- News Section -->
+      <section id="news" class="topic-section">
+        <div class="section-title">Latest News</div>
+        <div class="article">
+          <div class="article-title">India to Host G20 Summit in 2026</div>
+          <div class="article-author">By Editor | Nov 25, 2025</div>
+          <div>India will host the prestigious G20 summit with a focus on sustainability and global cooperation...</div>
+        </div>
+        <div class="article">
+          <div class="article-title">Major Metro Line Opens in Delhi</div>
+          <div class="article-author">By Sahil Verma</div>
+          <div>The newest metro route connects key city hubs and is expected to benefit millions of commuters.</div>
+        </div>
+      </section>
+
+      <!-- Technology Section -->
+      <section id="tech" class="topic-section">
+        <div class="section-title">Technology</div>
+        <div class="article">
+          <div class="article-title">AI Revolutionizes Education Tech</div>
+          <div class="article-author">By Sneha Rao</div>
+          <div>Adaptive learning and smart classrooms are the future trends in the Indian education system.</div>
+        </div>
+        <div class="article">
+          <div class="article-title">SpaceX Launches New Satellite</div>
+          <div class="article-author">By Ajay Sinha</div>
+          <div>Another milestone for commercial space exploration as the new satellite aims to improve connectivity.</div>
+        </div>
+      </section>
+
+      <!-- Health Section -->
+      <section id="health" class="topic-section">
+        <div class="section-title">Health</div>
+        <div class="article">
+          <div class="article-title">5 Simple Habits for a Healthier You</div>
+          <div class="article-author">By Preeti Malhotra</div>
+          <div>Diet, exercise, sleep, hydration, and routine check-ups can change your life for the better.</div>
+        </div>
+        <div class="article">
+          <div class="article-title">Yoga for Stress Relief</div>
+          <div class="article-author">By Dr. Kumar</div>
+          <div>Daily yoga practice can help curb anxiety and improve mental wellness, say experts.</div>
+        </div>
+      </section>
+
+      <!-- Entertainment Section -->
+      <section id="entertainment" class="topic-section">
+        <div class="section-title">Entertainment</div>
+        <div class="article">
+          <div class="article-title">Blockbuster Movie Breaks Records</div>
+          <div class="article-author">By Anjali Mehra</div>
+          <div>The latest release sees record box office collections, with fans raving about storyline and VFX.</div>
+        </div>
+        <div class="article">
+          <div class="article-title">Music Fest Comes to Mumbai</div>
+          <div class="article-author">By Staff Reporter</div>
+          <div>Top musicians from around the world performed to a sold-out arena in Mumbai last weekend.</div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Subscription Section -->
+    <section id="subscribe" class="subscribe-section">
+      <h2>Subscribe to Pulse Magazine</h2>
+      <form onsubmit="alert('Thank you for subscribing!');return false;">
+        <label for="email">Email address:</label>
+        <input type="email" id="email" required placeholder="Enter your email">
+        <button type="submit">Subscribe Now</button>
+      </form>
+    </section>
+  </div>
+  <footer>
+    &copy; 2025 Pulse Magazine. All rights reserved.
+  </footer>
+</body>
+</html>
